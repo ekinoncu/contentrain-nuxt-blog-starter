@@ -44,7 +44,5 @@ jobs:
           aws-region: eu-west-1
       - name: Deploy to s3
         run: |
-          node sitemap-generator.js  
-          mv sitemap.xml dist/sitemap.xml 
           aws s3 sync .output/public s3://altug
 
